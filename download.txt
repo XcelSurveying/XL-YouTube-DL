@@ -1,0 +1,12 @@
+from __future__ import print_function, unicode_literals
+import pafy
+import sys
+
+collection = ['U8k-0StE1Ik','7DSRJj7qfP8','BStiekPFKWI','xsB0v8GtVMw','8RMHJe1ZpKM','uFnsMLEgajQ']
+
+for url in collection:
+	video = pafy.new(url)
+
+	best = video.getbest()
+	best.download(quiet=False)
+	
